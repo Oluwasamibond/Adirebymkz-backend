@@ -37,6 +37,10 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/webhook", webhookRoutes);
 app.use("/api/stats", statsRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Adirebymkz server running...");
+});
+
 main()
   .then(() => console.log("Mongodb is connected"))
   .catch((err) => console.log(err));
@@ -44,9 +48,6 @@ main()
 async function main() {
   await mongoose.connect(process.env.DB_URL);
 
-  app.get("/", (req, res) => {
-    res.send("Adirebymkz server running...");
-  });
 }
 
 app.post("/uploadImage", (req, res) => {
