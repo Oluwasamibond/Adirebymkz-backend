@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://adirebymkz-frontend-ite1.vercel.app",
+    origin: "https://adirebymkz-new.vercel.app",
     credentials: true,
   })
 );
