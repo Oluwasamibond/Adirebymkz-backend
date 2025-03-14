@@ -27,7 +27,7 @@ router.post("/create-checkout-session", async (req, res) => {
         email,
         amount,
         currency: "NGN",
-        callback_url: "https://adirebymkz-new.vercel.app/success", // Redirect after payment
+        callback_url: "https://adirebymkz-finito.vercel.app/success", // Redirect after payment
         metadata: {
           name,
           phoneNumber, 
